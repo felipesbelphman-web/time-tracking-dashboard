@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Time tracking dashboard</title>
+  </head>
+  <body>
+    <main>
+      <section>
+        <div class="profile-info">
+          <img src="./images/felipe-profile.png" alt="" />
+          <p>Report for</p>
+          <h1>Felipe S. Belphman</h1>
+        </div>
+        <div class="timeframe-options">
+          <button type="button" class="is-active" data-timeframe="daily">Daily</button>
+          <button type="button" class="is-active"data-timeframe="weekly">Weekly</button>
+          <button type="button" class="is-active" data-timeframe="monthly">Monthly</button>
+        </div>
+      </section>
+      <section class="section-cards">
+        <div class="work-card" data-activity="Work">
+          <img src="./images/icon-work.svg" alt="" />
+          <div class="card-content">
+            <h2>Work</h2>
+            <img src="./images/icon-ellipsis.svg" alt="" class="card-ellipsis" />
+            <p class="current-hours">32hrs</p>
+            <p class="previous-hours">Last Week - 36hrs</p>
+          </div>
+        </div>
+        <div class="play-card" data-activity="Play">
+          <img src="./images/icon-play.svg" alt="" />
+          <div class="card-content">
+            <h2>Play</h2>
+            <img src="./images/icon-ellipsis.svg" alt="" class="card-ellipsis" />
+            <p class="current-hours">10hrs</p>
+            <p class="previous-hours">Last Week - 8hrs</p>
+          </div>
+        </div>
+        <div class="study-card" data-activity="Study">
+          <img src="./images/icon-study.svg" alt="" />
+          <div class="card-content">
+            <h2>Study</h2>
+            <img src="./images/icon-ellipsis.svg" alt="" class="card-ellipsis" />
+            <p class="current-hours">4hrs</p>
+            <p class="previous-hours">Last Week - 7hrs</p>
+          </div>
+        </div>
+        <div class="card-exercise" data-activity="Exercise">
+          <img src="./images/icon-exercise.svg" alt="" />
+          <div class="card-content">
+            <h2>Exercise</h2>
+            <img src="./images/icon-ellipsis.svg" alt="" class="card-ellipsis" />
+            <p class="current-hours">4hrs</p>
+            <p class="previous-hours">Last Week - 5hrs</p>
+          </div>
+        </div>
+        <div class="card-social" data-activity="Social">
+          <img src="./images/icon-social.svg" alt="" />
+          <div class="card-content">
+            <h2>Social</h2>
+            <img src="./images/icon-ellipsis.svg" alt="" class="card-ellipsis" />
+            <p class="current-hours">5hrs</p>
+            <p class="previous-hours">Last Week - 10hrs</p>
+          </div>
+        </div>
+        <div class="card-self-care" data-activity="Self Care">
+          <img src="./images/icon-self-care.svg" alt="" />
+          <div class="card-content">
+            <h2>Self Care</h2>
+            <img src="./images/icon-ellipsis.svg" alt="" class="card-ellipsis" />
+            <p class="current-hours">2hrs</p>
+            <p class="previous-hours">Last Week - 2hrs</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Felipe Santos Belphman</a>.
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>

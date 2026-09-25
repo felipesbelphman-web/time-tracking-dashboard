@@ -1,0 +1,253 @@
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+  font-family: "Rubik", sans-serif;
+  background-color: hsl(226, 43%, 10%);
+  color: white;
+  min-height: 100vh;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 24px;
+  width: min(calc(100% - 40px), 1000px);
+  margin: auto;
+}
+
+main > section:last-child {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.section-cards > div {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.section-cards > div > img {
+  position: absolute;
+  top: 0;
+  right: 16px;
+}
+
+.card-content  {
+  flex: 1;
+  padding: 24px;
+  border-radius: 16px 16px 0 0;
+  background-color: hsl(235, 46%, 20%);
+  position: relative;
+  margin-top: 44px;
+}
+
+.card-content > h2,
+.card-content > p {
+  margin: 0; 
+ 
+}
+
+.card-content > h2 {
+  margin-bottom: 20px;
+}
+
+.current-hours {
+  margin-bottom: 8px;
+}
+
+.previous-hours {
+  color: hsl(236, 100%, 87%);
+  font-size: 14px;
+}
+
+.current-hours  {
+  font-size: 48px;
+  width: 100%;
+  height: auto;
+}
+.work-card  {
+  background-color: hsl(15, 100%, 70%);
+  width: 100%;
+  height: auto;
+}
+
+main > section:first-child {
+  background-color: hsl(235, 46%, 20%);;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.profile-info {
+  background-color: hsl(246, 80%, 60%);
+  padding: 24px;
+  border-radius: 16px;
+}
+
+.profile-info h1 {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.2;
+  overflow-wrap: normal;
+}
+
+.profile-info p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.2;
+  overflow-wrap: normal;
+}
+
+.timeframe-options {
+  display: grid;
+  gap: 12px;
+  padding: 24px;
+}
+
+.timeframe-options button.is-active {
+  
+  color: hsl(235, 45%, 61%);
+}
+
+.timeframe-options button:hover,
+.timeframe-options button:focus-visible {
+  color: white;
+  
+}
+
+
+.play-card  {
+  background-color: hsl(195, 74%, 62%);
+}
+
+.study-card  {
+  background-color: hsl(348, 100%, 68%);
+}
+
+.card-exercise  {
+  background-color: hsl(145, 58%, 55%);
+}
+
+.card-social {
+  background-color: hsl(264, 64%, 52%);
+}
+
+.card-self-care {
+  background-color: hsl(43, 84%, 65%);
+}
+
+.profile-info > img {
+  width: 74px;
+  height:74px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+
+.timeframe-options button {
+  background-color: transparent;
+  border: 0;
+  color: hsl(235, 45%, 61%);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+@keyframes card-bounce {
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.section-cards.is-animating > div {
+  animation: card-bounce 350ms ease-in-out;
+}
+
+@keyframes icon-tilt {
+  50% {
+    transform: rotate(45deg);
+  }
+}
+
+.section-cards.is-animating > div > img {
+  animation: icon-tilt 350ms ease-in-out;
+}
+
+.card-ellipsis {
+  position: absolute;
+  top: 28px;
+  right: 24px;
+  width: 24px;
+}
+
+.attribution {
+  padding: 16px 20px;
+  text-align: center;
+  font-size: 12px;
+  color: hsl(236, 100%, 87%);
+}
+
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  main > section:last-child {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-info {
+    display: grid;
+    grid-template-columns: 74px 1fr;
+    column-gap: 16px;
+    align-items: center;
+  }
+
+  .profile-info > img {
+    grid-row: span 2;
+  }
+
+  .timeframe-options {
+    grid-template-columns: repeat(3, 1fr)
+  }
+
+  .timeframe-options button {
+    text-align: center;
+  }
+
+  .card-content {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: end;
+    column-gap: 12px;
+  }
+
+  .card-content > h2 {
+    grid-column: 1 / -1;
+  }
+
+  .previous-hours {
+    justify-self: end; 
+  }
+  .current-hours {
+    width: auto;
+    font-size: 32px;
+    margin-bottom: 0;
+  }
+  .card-content {
+    padding: 20px;
+  }
+
+  .card-content > h2 {
+    margin-bottom: 12px;
+  }
+}
